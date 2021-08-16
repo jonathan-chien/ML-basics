@@ -7,10 +7,14 @@ BMI3002 HW3 Q8 Recursive Feature Elimination (RFE)
 @author: Jonathan Chien
 """
 
-#%% Import dataset, set seed, and randomly split data into train and test sets
+#%% Import standard libraries
 
 import numpy as np
 import random
+import sklearn as skl
+ 
+
+#%% Import dataset, set seed, and randomly split data into train and test sets
 
 datafile = open("ionosphere.data", "r")
 
@@ -73,8 +77,6 @@ elif classifier == "LR":
     
     
 #%% Try all combinations of classifiers and selected feature sets
-
-import sklearn as skl 
 
 # For each classifier, cycle through each of the three feature sets from above.
 # Store results in results1 array, where elements 1-3 are accuracy for RF on
